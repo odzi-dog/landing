@@ -24,7 +24,7 @@ changeLanguage("en");
 				<!-- Buttons -->
 				<div>
 					{ Socials.map((social) => (
-						<a class="hidden md:inline mx-4 text-sm lg:text-base">{ t(`socials.${ social.text }`) }</a>
+						<a href={social.link} class="hidden md:inline mx-4 text-sm lg:text-base">{ t(`socials.${ social.text }`) }</a>
 					))}
 
 					<!-- Language picker -->

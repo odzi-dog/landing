@@ -9,7 +9,7 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "gen-locals": "npx astro-i18next generate"
+    "gen-locales": "npx astro-i18next generate"
   },
   "dependencies": {
     "@astrojs/cloudflare": "^3.1.0",
