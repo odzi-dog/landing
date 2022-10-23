@@ -1,0 +1,40 @@
+---
+import { HeaderLinks } from '../config/HeaderLinks.const';
+import { Socials } from '../config/Socials.const';
+---
+
+<header id="header" class="w-full px-6 py-4 flex items-stretch justify-between">
+  <!-- Left side -->
+  <div>
+    <!-- Logotype -->
+    <img class="h-8 inline mr-8" src="images/logotype-black.svg" alt="odzi.dog logotype">
+
+    <!-- Links -->
+    { HeaderLinks.map((link) => (
+      <a class="mx-6 uppercase" href={ link.href }>
+        { link.text }  
+      </a>
+    ))}
+  </div>
+
+  <!-- Right side -->
+  <div>
+    <!-- Social buttons -->
+    { Socials.map((social) => (
+      <a class="mx-4">{ social.text }</a>
+    ))}
+
+    <!-- Documentation link -->
+    <a href="https://docs.odzi.dog" class="rounded-full bg-black px-6 py-1 text-white">
+      Documentation
+    </a>
+  </div>
+</header>
+
+<style>
+  /* Icon styling */
+  [astro-icon] {
+    display: inline;
+    @apply h-4;
+  }
+</style>

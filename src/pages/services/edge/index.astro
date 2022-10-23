@@ -1,0 +1,26 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import logotype from "../../../images/logotype-black.svg";
+import { t, changeLanguage } from "i18next";
+import { localizePath } from "astro-i18next";
+
+changeLanguage("en");
+---
+
+<Layout title="edge.docs" isHeaderEnabled={false} isFooterEnabled={false}>
+  <main class="w-full flex-grow flex flex-col items-center justify-center">
+    <!-- Logotype -->
+    <img class="h-16 inline" src={ logotype } alt="odzi.dog logotype">
+
+    <!-- Text -->
+    <div class="w-1/6 text-center">
+      <h1 class="text-3xl font-bold mt-6">{ t("edge.wip.title") }</h1>
+      <p class="text-md">{ t("edge.wip.subtitle") }</p>
+    </div>
+
+    <!-- Buttons -->
+    <a href={localizePath("/")} class="rounded-full bg-slate-300 font-medium text-black px-6 py-2 mt-4">
+      { t("edge.wip.home") }
+    </a>
+  </main>
+</Layout>

@@ -1,0 +1,50 @@
+---
+import { Ratio, RatioConfig } from './RatioConfigurations.const';
+import { Type } from './TypeConfiguration.const';
+import { t } from 'i18next';
+
+export interface Props {
+  // width/height
+  ratio: Ratio;
+
+  // Card type
+  type?: Type;
+
+  // Is empty?
+  isEmpty?: boolean;
+}
+
+// Properties
+const type = Astro.props.type ?? "horizontal";
+const ratio = RatioConfig[Astro.props.ratio];
+const isEmpty = Astro.props.isEmpty ?? false;
+---
+
+<div style={ `--card-height: ${ ratio.height }%;` } class={ `${ ratio.width } relative card` }>
+  <div class="absolute w-full h-full p-0.25">
+    <div class={ `w-full h-full rounded-2xl bg-slate-50 p-4 text-black flex ${ type == "horizontal" ? "" : "flex-col justify-center" } ${ isEmpty ? "items-center justify-center" : "" }` }>
+      { isEmpty 
+        ? <div class="opacity-70 text-center w-2/3">
+            <h1 class="text-3xl">{ t("landing.emptyCard.title") }</h1>
+            <p class="text-md text-opacity-70">{ t("landing.emptyCard.subtitle") }</p>
+          </div>
+        
+        : <div class={ `${ type == "horizontal" ? "w-1/2" : "" } flex flex-col items-start justify-center` }>
+            <slot name="header" />
+          </div>
+
+          <div class={ `${ type == "vertical" ? "mt-12" : "" }` }>
+            <slot name="footer" />
+          </div>
+      }
+    </div>
+  </div>
+</div>
+
+<style>
+  .card:after {
+    content: "";
+    display: block;
+    padding-bottom: var(--card-height);
+  }
+</style>

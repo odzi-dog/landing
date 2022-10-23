@@ -1,0 +1,39 @@
+{
+  "title": {
+    "default": "odzi.dog",
+    "404": "Not Found",
+    "edge": {
+      "default": "Odzi Edge",
+      "docs": "Odzi Edge | Documentation"
+    }
+  },
+  "socials": {
+    "github": "GitHub",
+    "docs": "Documentation"
+  },
+  "landing": {
+    "title": "Small services for <0>big ideas<0>",
+    "subtitle": "Our team is engaged in creating small, completely free and private services for other developers and ordinary users.",
+    
+    "edge": {
+      "title": "Modular edge functions on <0>your cloud<0>",
+      
+      "learnMore": "Learn more",
+      "documentation": "Documentation"
+    },
+
+    "emptyCard": {
+      "title": "Empty",
+      "subtitle": "Someday this card will have a new service on it... But not now."
+    }
+  },
+
+  "edge": {
+    "wip": {
+      "title": "Still in development",
+      "subtitle": "Yeah, this service is still in development stage... Come back in... eeh, come back sometime, please.",
+
+      "home": "Home"
+    }
+  }
+}

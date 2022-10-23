@@ -1,0 +1,25 @@
+---
+import { changeLanguage } from "i18next";
+import Layout from "../../layouts/Layout.astro";
+import logotype from "../../images/logotype-black.svg";
+
+changeLanguage("uk");
+---
+
+<Layout title="404" isHeaderEnabled={false} isFooterEnabled={false}>
+  <main class="w-full flex-grow flex flex-col items-center justify-center">
+    <!-- Logotype -->
+    <img class="h-16 inline" src={ logotype } alt="odzi.dog logotype">
+
+    <!-- Text -->
+    <div class="w-1/6 text-center">
+      <h1 class="text-3xl font-bold mt-6">Page not found</h1>
+      <p class="text-md">Maybe you've clicked somewhere you should not? No problem, just go <span class="border-b-2 border-black border-opacity-70">Home</span> and try this stunt again.</p>
+    </div>
+
+    <!-- Buttons -->
+    <a href="/" class="rounded-full bg-slate-300 font-medium text-black px-6 py-2 mt-4">
+      Home
+    </a>
+  </main>
+</Layout>

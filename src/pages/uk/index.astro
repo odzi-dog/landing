@@ -1,0 +1,74 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Card from "../../components/Card/index.astro";
+import LanguageSelector from "../../components/LanguageSelector.astro";
+import { localizePath } from "astro-i18next";
+import { Trans } from "astro-i18next/components";
+import { t, changeLanguage } from "i18next";
+import { Socials } from "../../config/Socials.const";
+import logotype from "../../images/logotype-black.svg";
+
+changeLanguage("uk");
+---
+
+<Layout isHeaderEnabled={false}>
+	<main class="flex-grow p-6">
+		<div class="w-full h-full flex flex-wrap items-center justify-center bg-black rounded-2xl p-0.25 relative">
+			<!-- In-card header -->
+			<div class="absolute top-0 left-0 w-2/3 p-6 z-10 flex items-center justify-between">
+				<!-- Logotype -->
+				<img class="h-8 inline mr-8" src={logotype} alt="odzi.dog logotype">
+			
+				<!-- Buttons -->
+				<div>
+					{ Socials.map((social) => (
+						<a class="mx-4">{ t(`socials.${ social.text }`) }</a>
+					))}
+
+					<!-- Language picker -->
+					<LanguageSelector showFlag={true} />
+				</div>
+			</div>
+
+			<!-- Top -->
+			<Card ratio="2/1" type="horizontal">
+				<div slot="header">
+					<h1 class="text-6xl font-bold">
+						<Trans i18nKey="landing.title">
+							Small services for <span class="border-b-2 border-black border-opacity-70">big ideas</span>
+						</Trans>
+					</h1>
+
+					<p class="text-2xl mt-4">{ t("landing.subtitle") }</p>
+				</div>
+			</Card>
+			
+			<Card ratio="1/1" type="vertical">
+				<!-- Title -->
+				<div slot="header">
+					<h1 class="text-6xl font-bold">
+						<Trans i18nKey="landing.edge.title">
+							Modular edge functions on <span class="border-b-2 border-black border-opacity-70">your cloud</span>
+						</Trans>
+					</h1>
+				</div>
+
+				<!-- Buttons -->
+				<div slot="footer">
+					<a href={localizePath("/services/edge")} class="inline rounded-full bg-gradient-to-tr from-orange-500 to-pink-500 text-white font-medium px-6 py-2">
+						{ t("landing.edge.learnMore") }
+					</a>
+
+					<a href={localizePath("/services/edge/docs")} class="inline rounded-full bg-slate-200 text-black mx-2 font-medium px-6 py-2">
+						{ t("landing.edge.documentation") } 
+					</a>
+				</div>
+			</Card>
+
+			<!-- Bottom -->
+			<Card ratio="1/1" isEmpty />
+			<Card ratio="1/1" isEmpty />
+			<Card ratio="1/1" isEmpty />
+		</div>
+	</main>
+</Layout>
