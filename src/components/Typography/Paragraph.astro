@@ -1,0 +1,19 @@
+---
+export interface Props extends astroHTML.JSX.BaseHTMLAttributes {
+  size: Size;
+};
+
+type Size = 'huge' | 'small';
+
+const sizes: Record<Size, string> = {
+  'huge': "text-md lg:text-2xl",
+  'small': ""
+};
+
+const size = sizes[Astro.props.size];
+const { class: customClasses } = Astro.props;
+---
+
+<p class={ `${ size } ${ customClasses }` }>
+  <slot />
+</p>

@@ -20,7 +20,7 @@ const ratio = RatioConfig[Astro.props.ratio];
 const isEmpty = Astro.props.isEmpty ?? false;
 ---
 
-<div style={ `--card-height: ${ ratio.height }%;` } class={ `${ ratio.width } relative card` }>
+<div class={ `w-full ${ ratio.width } relative after:content-[''] after:block after:pb-[100%] ${ ratio.height }` }>
   <div class="absolute w-full h-full p-0.25">
     <div class={ `w-full h-full rounded-2xl bg-slate-50 p-4 text-black flex ${ type == "horizontal" ? "" : "flex-col justify-center" } ${ isEmpty ? "items-center justify-center" : "" }` }>
       { isEmpty 
@@ -40,11 +40,3 @@ const isEmpty = Astro.props.isEmpty ?? false;
     </div>
   </div>
 </div>
-
-<style>
-  .card:after {
-    content: "";
-    display: block;
-    padding-bottom: var(--card-height);
-  }
-</style>
