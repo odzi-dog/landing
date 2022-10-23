@@ -1,5 +1,5 @@
 ---
-export interface Props {
+export interface Props extends astroHTML.JSX.BaseHTMLAttributes {
   size: Size;
 };
 
@@ -11,8 +11,9 @@ const sizes: Record<Size, string> = {
 };
 
 const size = sizes[Astro.props.size];
+const { class: customClasses } = Astro.props;
 ---
 
-<h1 class={ `${size}` }>
+<h1 class={ `${size} ${customClasses}` }>
   <slot />
 </h1>

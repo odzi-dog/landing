@@ -33,7 +33,7 @@ changeLanguage("en");
 			</div>
 
 			<!-- Top -->
-			<Card ratio="2/1" type="horizontal">
+			<Card ratio="2/1" type="horizontal" isCentered>
 				<div slot="header">
 					<Header size="huge">
 						<Trans i18nKey="landing.title">
@@ -63,11 +63,11 @@ changeLanguage("en");
 
 				<!-- Buttons -->
 				<div slot="footer">
-					<a href={localizePath("/services/edge")} class="inline rounded-full bg-gradient-to-tr from-orange-500 to-pink-500 text-sm lg:text-base text-white font-medium px-3 py-1 md:px-6 md:py-2">
+					<a href={localizePath("/services/edge")} class="inline rounded-full bg-gradient-to-tr from-orange-500 to-pink-500 text-base text-white font-medium px-3 py-1 md:px-6 md:py-2">
 						{ t("landing.edge.learnMore") }
 					</a>
 
-					<a href={localizePath("/services/edge/docs")} class="md:hidden lg:inline rounded-full bg-slate-200 mx-2 text-sm lg:text-base text-black font-medium px-3 py-1 md:px-6 md:py-2">
+					<a href={localizePath("/services/edge/docs")} class="md:hidden lg:inline rounded-full bg-slate-200 mx-2 text-base text-black font-medium px-3 py-1 md:px-6 md:py-2">
 						{ t("landing.edge.documentation") } 
 					</a>
 				</div>
