@@ -13,7 +13,7 @@
   },
   "landing": {
     "title": "Small services for <0>big ideas<0>",
-    "subtitle": "Our team is engaged in creating small, completely free and private services for other developers and ordinary users.",
+    "subtitle": "Our team is creating small, completely free and private services for other developers and ordinary users.",
     
     "edge": {
       "title": "Modular edge functions on <0>your cloud<0>",
@@ -35,6 +35,12 @@
       "subtitle": "Yeah, this service is still in development stage... Come back in... eeh, come back sometime, please.",
 
       "home": "Home"
+    }
+  },
+
+  "footer": {
+    "leftSide": {
+      "subtitle": "Small services for your pleasure"
     }
   }
 }
