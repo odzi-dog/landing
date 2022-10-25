@@ -1,0 +1,13 @@
+<script>
+  // Creating default object
+  // @ts-ignore
+  window.application = {};
+  
+  // Available attributes
+  const attributes = ["supportedLanguages"];
+  
+  // Getting data from body's attributes
+  attributes.forEach((attribute) => {
+    window.application[attribute] = JSON.parse(document.body.attributes[attribute].value);
+  });
+</script>
