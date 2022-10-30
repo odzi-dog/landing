@@ -12,4 +12,4 @@
 
 ### Overview
 
-This is an repository, which contains source code for odzi.dog's main landing application; it's a static multi-page website, hosted on Github Pages and built using Astro.
+This repository contains source code for odzi.dog's main landing application; it's a static multi-page website, hosted on Github Pages and built using Astro.
