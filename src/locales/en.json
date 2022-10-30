@@ -1,10 +1,10 @@
 {
   "title": {
-    "default": "odzi.dog",
-    "404": "Not Found",
+    "default": "odzi dog - Small services for small things",
+    "404": "Page Not Found",
     "edge": {
-      "default": "Odzi Edge",
-      "docs": "Odzi Edge | Documentation"
+      "default": "odzi edge - extensible edge functions, authorization, storage on your own cloud",
+      "docs": "odzi edge - Documentation"
     }
   },
   "socials": {

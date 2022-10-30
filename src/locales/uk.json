@@ -1,10 +1,10 @@
 {
   "title": {
-    "default": "odzi.dog",
+    "default": "odzi dog - маленькі сервіси для маленьких речей",
     "404": "Сторінка не знайдена",
     "edge": {
-      "default": "Odzi Edge",
-      "docs": "Odzi Edge | Документація"
+      "default": "odzi edge - модульні edge-функції, системи авторизації, хмарне сховище на ваших власних потужностях",
+      "docs": "odzi edge - Документація"
     }
   },
   "socials": {

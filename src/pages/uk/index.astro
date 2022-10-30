@@ -6,7 +6,7 @@ import Header from "../../components/Typography/Header.astro";
 import Paragraph from "../../components/Typography/Paragraph.astro";
 import { localizePath } from "astro-i18next";
 import { Trans } from "astro-i18next/components";
-import { t, changeLanguage } from "i18next";
+import i18next, { t, changeLanguage } from "i18next";
 import { Socials } from "../../config/Socials.const";
 import logotype from "../../images/logotype-black.svg";
 
@@ -76,3 +76,17 @@ changeLanguage("uk");
 		</div>
 	</main>
 </Layout>
+
+<script>
+	// Do we need to check client's language?
+	// -> Yes, if we are on root (/) path
+	console.log(window.location.pathname)
+	if (window.location.pathname == "/") {
+		// Trying to get browser's language
+		window.application.supportedLanguages.forEach((supportedLanguage) => {
+			if (navigator.language.includes(supportedLanguage) && supportedLanguage != "en") {
+				window.location.href = "/" + supportedLanguage;
+			};
+		});
+	};
+</script>
