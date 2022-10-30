@@ -9,12 +9,14 @@ import { Application } from '../Application.interface';
 // Layout properties
 export interface Props {
 	title?: string;
+	description: string;
 	isHeaderEnabled?: boolean;
 	isFooterEnabled?: boolean;
 }
 
 const {
 	title = "default",
+	description,
 	isHeaderEnabled = true,
 	isFooterEnabled = true
 } = Astro.props;
@@ -36,6 +38,7 @@ const applicationConfiguration: Record<keyof Application, any> = {
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
+		<meta name="description" content={ t(`descriptions.${ description }`) } />
 		<title>{ t(`title.${ title }`) }</title>
 		<HeadHrefLangs />
 	</head>

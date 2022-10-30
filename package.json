@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro build",
+    "build": "npm run gen-locales && astro build",
     "preview": "astro preview",
     "astro": "astro",
     "gen-locales": "npx astro-i18next generate"

@@ -13,7 +13,7 @@ import logotype from "../images/logotype-black.svg";
 changeLanguage("en");
 ---
 
-<Layout isHeaderEnabled={false}>
+<Layout description="default" isHeaderEnabled={false}>
 	<main class="flex-grow p-6">
 		<div class="w-full h-full flex flex-wrap items-center justify-center bg-black rounded-2xl p-0.25 relative">
 			<!-- In-card header -->
@@ -80,7 +80,6 @@ changeLanguage("en");
 <script>
 	// Do we need to check client's language?
 	// -> Yes, if we are on root (/) path
-	console.log(window.location.pathname)
 	if (window.location.pathname == "/") {
 		// Trying to get browser's language
 		window.application.supportedLanguages.forEach((supportedLanguage) => {
