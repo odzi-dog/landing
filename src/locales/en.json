@@ -5,6 +5,9 @@
     "edge": {
       "default": "odzi edge - extensible edge functions, authorization, storage on your own cloud",
       "docs": "odzi edge - Documentation"
+    },
+    "mishok": {
+      "default": "mishok - your own ultimate anti-boredom application"
     }
   },
   "descriptions": {
@@ -12,6 +15,9 @@
     "edge": {
       "default": "odzi edge is an edge-function service which main distinguishing feature is its modularity and speed.",
       "docs": "Documentation on using, upgrading and operating the odzi edge modular edge-function service."
+    },
+    "mishok": {
+      "default": "Mishok is an application, which will send different kinds of content tailored just for you."
     }
   },
   "socials": {
@@ -30,6 +36,13 @@
       "documentation": "Documentation"
     },
 
+    "mishok": {
+      "title": "Your ultimate anti-boredom application",
+      "subtitle": "This service is still in development stage.",
+
+      "github": "GitHub"
+    },
+
     "emptyCard": {
       "title": "Empty",
       "subtitle": "Someday this card will have a new service on it... But not now."
@@ -40,6 +53,15 @@
     "wip": {
       "title": "Still in development",
       "subtitle": "Yeah, this service is still in development stage... Come back in... eeh, come back sometime, please.",
+
+      "home": "Home"
+    }
+  },
+
+  "mishok": {
+    "wip": {
+      "title": "Still in development",
+      "subtitle": "This application is still in early stages of development.",
 
       "home": "Home"
     }

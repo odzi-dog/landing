@@ -70,7 +70,24 @@ changeLanguage("en");
 			</Card>
 
 			<!-- Bottom -->
-			<Card ratio="1/1" isEmpty />
+			<Card ratio="1/1" type="vertical">
+				<!-- Title -->
+				<div slot="header">
+					<Header size="huge">
+						{ t("landing.mishok.title") }
+					</Header>
+
+					<Paragraph size="huge" class="mt-2 md:mt-4 md:hidden">{ t("landing.mishok.subtitle") }</Paragraph>
+				</div>
+
+				<!-- Buttons -->
+				<div slot="footer">
+					<a href="https://github.com/odzi-dog/mishok" class="md:hidden lg:inline rounded-full bg-slate-200 mx-2 text-base text-black font-medium px-3 py-1 md:px-6 md:py-2">
+						{ t("landing.mishok.github") } 
+					</a>
+				</div>
+			</Card>
+
 			<Card ratio="1/1" isEmpty />
 			<Card ratio="1/1" isEmpty />
 		</div>
