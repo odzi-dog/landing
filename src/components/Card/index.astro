@@ -13,6 +13,8 @@ export interface Props {
   // Is empty?
   isEmpty?: boolean;
   isCentered?: boolean;
+
+  withBackground?: boolean;
 }
 
 // Properties
@@ -20,11 +22,12 @@ const type = Astro.props.type ?? "horizontal";
 const ratio = RatioConfig[Astro.props.ratio];
 const isEmpty = Astro.props.isEmpty ?? false;
 const isCentered = (Astro.props.isCentered || Astro.props.isEmpty) ?? false;
+const withBackground = Astro.props.withBackground ?? true;
 ---
 
 <div class={ `w-full ${ ratio.width } relative after:content-[''] after:block after:pb-[100%] ${ ratio.height }` }>
-  <div class="absolute w-full h-full p-0.25">
-    <div class={ `w-full h-full rounded-2xl bg-slate-50 p-4 text-black flex flex-col ${ type == "horizontal" ? "md:flex-row" : "justify-center" } ${ isCentered ? "items-center justify-center" : "" }` }>
+  <div class="absolute w-full h-full p-0.25 z-10">
+    <div class={ `w-full h-full rounded-2xl ${ withBackground ? "bg-slate-50" : "" } p-4 text-black flex flex-col ${ type == "horizontal" ? "md:flex-row" : "justify-center" } ${ isCentered ? "items-center justify-center" : "" }` }>
       { isEmpty 
         ? <div class="opacity-70 text-center w-2/3">
             <h1 class="text-3xl">{ t("landing.emptyCard.title") }</h1>
@@ -39,6 +42,10 @@ const isCentered = (Astro.props.isCentered || Astro.props.isEmpty) ?? false;
             <slot name="footer" />
           </div>
       }
+
     </div>
   </div>
+
+  <!-- Outer slot -->
+  <slot />
 </div>

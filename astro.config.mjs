@@ -6,8 +6,11 @@ import astroI18next from "astro-i18next";
 import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
+import svelte from "@astrojs/svelte";
+
+// https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind(), astroI18next(), sitemap()],
+  integrations: [tailwind(), astroI18next(), sitemap(), svelte()],
   site: 'https://odzi.dog',
   base: '/'
 });
