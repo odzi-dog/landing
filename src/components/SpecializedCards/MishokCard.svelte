@@ -48,8 +48,8 @@
 
 <!-- Background -->
 <div class="w-full md:w-1/3 relative after:content-[''] after:block after:pb-[100%]">
-    <div class="absolute p-0.25 w-full h-full z-5 overflow-hidden border-2 border-black">
-        <div class="rounded-2xl w-full h-full bg-slate-50 flex items-center justify-end group">
+    <div class="absolute p-0.25 w-full h-full z-5">
+        <div class="rounded-2xl w-full h-full bg-slate-50 flex items-center justify-end group overflow-hidden">
             <!-- Mishok logotype -->
             <div class="absolute transition ease-in-out duration-300 top-0 w-full p-4 md:px-4 md:py-2 lg:p-6 flex items-center group-hover:opacity-0">
                 <img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/325/shopping-bags_1f6cd-fe0f.png" class="w-8" alt="Mishok Bag Emoji">
