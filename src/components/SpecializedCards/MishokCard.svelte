@@ -52,7 +52,7 @@
         <div class="rounded-2xl w-full h-full bg-slate-50 flex items-center justify-end group overflow-hidden">
             <!-- Mishok logotype -->
             <div class="absolute transition ease-in-out duration-300 top-0 w-full p-4 md:px-4 md:py-2 lg:p-6 flex items-center group-hover:opacity-0">
-                <img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/325/shopping-bags_1f6cd-fe0f.png" class="w-8" alt="Mishok Bag Emoji">
+                <img src="https://em-content.zobj.net/thumbs/120/apple/325/shopping-bags_1f6cd-fe0f.png" class="w-8" alt="Mishok Bag Emoji">
                 <h1 class="text-xl text-black ml-1.5 font-medium">mishok</h1>
             </div>
 
