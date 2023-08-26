@@ -38,42 +38,18 @@ changeLanguage("uk");
 				<div slot="header">
 					<Header size="huge">
 						<Trans i18nKey="landing.title">
-							Small services for <span class="border-b-2 border-black border-opacity-70">big ideas</span>
+							⚠️ Currently working <span class="border-b-2 border-black border-opacity-70">on something</span>
 						</Trans>
 					</Header>
 					
 					<Paragraph size="huge" class="mt-2 md:mt-4">{ t("landing.subtitle") }</Paragraph>
 				</div>
 			</Card>
-			
-			<!-- Odzi Cloud Card -->
-			<Card ratio="1/1" type="vertical">
-				<!-- Title -->
-				<div slot="header">
-					<Header size="huge">
-						<Trans i18nKey="landing.edge.title">
-							Modular edge functions on <span class="border-b-2 border-black border-opacity-70">your cloud</span>
-						</Trans>
-					</Header>
-
-					<Paragraph size="huge" class="mt-2 md:mt-4 md:hidden">{ t("landing.edge.subtitle") }</Paragraph>
-				</div>
-
-				<!-- Buttons -->
-				<div slot="footer">
-					<a href={localizePath("/services/edge")} class="inline rounded-full bg-gradient-to-tr from-orange-500 to-pink-500 text-base text-white font-medium px-3 py-1 md:px-6 md:py-2">
-						{ t("landing.edge.learnMore") }
-					</a>
-
-					<a href={localizePath("/services/edge/docs")} class="md:hidden lg:inline rounded-full bg-slate-200 mx-2 text-base text-black font-medium px-3 py-1 md:px-6 md:py-2">
-						{ t("landing.edge.documentation") } 
-					</a>
-				</div>
-			</Card>
 
 			<!-- Mishok Card -->
-			<MishokCard client:load />
-
+			<!-- <MishokCard client:load /> -->
+			<Card ratio="1/1" isEmpty />
+			<Card ratio="1/1" isEmpty />
 			<Card ratio="1/1" isEmpty />
 			<Card ratio="1/1" isEmpty />
 		</div>

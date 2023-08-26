@@ -1,6 +1,6 @@
 {
   "title": {
-    "default": "Odzi dog - Small services for small things",
+    "default": "Odzi dog - Work in progress",
     "404": "Page Not Found",
     "edge": {
       "default": "Odzi edge - extensible edge functions, authorization, storage on your own cloud",
@@ -25,8 +25,8 @@
     "docs": "Documentation"
   },
   "landing": {
-    "title": "Small services for <0>small ideas<0>",
-    "subtitle": "Our team is creating small, completely free and private services for other developers and ordinary users.",
+    "title": "⚠️ Currently working <0>on something<0>",
+    "subtitle": "We are in a \"rebuilding\" phase right now. So, for now, you won't see anything here.",
     
     "edge": {
       "title": "Modular edge functions on <0>your cloud<0>",
